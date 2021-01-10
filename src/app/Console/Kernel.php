@@ -4,8 +4,8 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
-use App\Models\BitcoinSelling;
-use App\Logger\BaseLogger;
+// use App\Models\BitcoinSelling;
+// use App\Logger\BaseLogger;
 
 class Kernel extends ConsoleKernel
 {
@@ -30,15 +30,15 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(function () {
+        // $schedule->call(function () {
 
-            $this->baseLogger = new BaseLogger;
-            $this->baseLogger->init('logs/schedules_logs/schedules_' . date('Y-m-d') . '.log');
+        //     $this->baseLogger = new BaseLogger;
+        //     $this->baseLogger->init('logs/schedules_logs/schedules_' . date('Y-m-d') . '.log');
 
-            $transactions = BitcoinSelling::where('processed', false)->get();
+        //     $transactions = BitcoinSelling::where('processed', false)->get();
 
-            $this->baseLogger->info('LOG FROM SCHEDULE BITCOIN TRANSACTIONS: '.json_encode($transactions));
+        //     $this->baseLogger->info('LOG FROM SCHEDULE BITCOIN TRANSACTIONS: '.json_encode($transactions));
 
-        })->everyMinute();
+        // })->everyMinute();
     }
 }
