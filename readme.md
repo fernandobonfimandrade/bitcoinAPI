@@ -30,3 +30,4 @@ Next step execute the migrations
 
 ## Api documentation
 
+https://fernandobonfimandrade.github.io/bitcoinAPI.github.io/
